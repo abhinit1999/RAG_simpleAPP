@@ -1,0 +1,14 @@
+ipykernel
+PyPDF
+dotenv
+langchain-community
+langchain-core
+langchain-huggingface
+huggingface
+sentence-transformers
+FAISS-cpu
+langchain-groq
+streamlit
+
+
+
