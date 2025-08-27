@@ -51,17 +51,17 @@ prompt = PromptTemplate(
         input_variables=['context','question']
 )
 
-        
-# user question and Input button
+if uploade_file:     
+    # user question and Input button
 
-st.subheader("Ask the question about the document...")
-input_question = st.text_input("Enter you question here")
-ask_button = st.button("ask")
+    st.subheader("Ask the question about the document...")
+    input_question = st.text_input("Enter you question here")
+    ask_button = st.button("ask")
 
-# handiling the ask button
-if input_question and ask_button:
-    with st.spinner("Generating answer...."):
-        retrivew_docs = retriever.invoke(input_question)
-        final_prompt = prompt.invoke({'context':retrivew_docs,'question':input_question})
-        answer = model.invoke(final_prompt)
-        st.markdown(f"Answer:-> {answer.content}")
+    # handiling the ask button
+    if input_question and ask_button:
+        with st.spinner("Generating answer...."):
+            retrivew_docs = retriever.invoke(input_question)
+            final_prompt = prompt.invoke({'context':retrivew_docs,'question':input_question})
+            answer = model.invoke(final_prompt)
+            st.markdown(f"Answer:-> {answer.content}")
