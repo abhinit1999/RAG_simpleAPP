@@ -15,7 +15,7 @@ model = ChatGroq(model='gemma2-9b-it',groq_api_key=groq_api_key)
 
 st.title("RAG application By Verto(Abhinit)")
 
-uploade_file = st.file_uploader("Upload you PDF", type=['PDF'])
+uploade_file = st.file_uploader("Upload your PDF", type=['PDF'])
 
 if uploade_file:
     with st.spinner("processing document...."):
